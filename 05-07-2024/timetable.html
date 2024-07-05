@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 98vh;
+        }
+        table {
+            width: 75%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th colspan="10">Time Table</th>
+    </tr>
+    <tr>
+        <th rowspan="8">Hours</th>
+    </tr>
+    <tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Science</td>
+        <td>Arts</td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Science</td>
+        <td>Arts</td>
+    </tr>
+    <tr>
+        <td colspan="5">Lunch</td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td colspan="2" rowspan="2">Project</td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td>Science</td>
+        <td>Math</td>
+    </tr>
+</table>
+
+</body>
+</html>
