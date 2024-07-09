@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Bar</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+
+      form {
+        margin: 20px;
+      }
+      section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+      }
+      input:active {
+        border: none;
+        outline: none;
+      }
+
+      .search-container {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        border: 1px solid #827979;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 50px;
+      }
+
+      .search-input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+      }
+
+      .search-icon {
+        width: 50px;
+        height: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+      }
+
+      .search-icon:hover {
+        background-color: #45a049;
+      }
+      .search-icon img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <form action="#">
+        <div class="search-container">
+          <input
+            type="text"
+            name="search"
+            class="search-input"
+            placeholder="Search..."
+          />
+          <button type="submit" class="search-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/151/151773.png"
+              alt="Search"
+            />
+          </button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
