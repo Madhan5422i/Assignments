@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .question {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .answer {
+        display: none;
+        padding: 10px;
+      }
+
+      .plus {
+        float: right;
+      }
+
+      .question:hover {
+        background-color: #f0f0f0;
+      }
+
+      .question input[type="checkbox"] {
+        display: none;
+      }
+
+      .question input[type="checkbox"] + .plus::before {
+        content: "+";
+        float: right;
+        cursor: pointer;
+      }
+
+      .question input[type="checkbox"]:checked + .plus::before {
+        content: "-";
+      }
+
+      .question input[type="checkbox"]:checked ~ .answer {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hindusthan FullStack Development tasks</h2>
+
+      <div class="question">
+        <input type="checkbox" id="q1" />
+        <label for="q1" class="plus"></label>
+        04-07-2024
+        <div class="answer">
+          <a
+            href="https://madhan5422i.github.io/Assignments/04-07-2024/index.html"
+            >Student Registration</a
+          >
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="q2" />
+        <label for="q2" class="plus"></label>
+        05-07-2024
+        <div class="answer">
+          <div>
+            <a
+              href="https://madhan5422i.github.io/Assignments/05-07-2024/chessboard.html"
+              >Chess Board</a><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/05-07-2024/gallery.html"
+              >Gallery</a
+            ><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/05-07-2024/timetable.html"
+              >Time Table</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="q3" />
+        <label for="q3" class="plus"></label>
+        08-07-2024
+        <div class="answer">
+          <div>
+            <a
+              href="https://madhan5422i.github.io/Assignments/08-07-2024/listingpage.html"
+              >Listing Page</a><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/08-07-2024/recipe.html"
+              >Recipe Page</a
+            ><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/08-07-2024/simpleform.html"
+              >Simple Form</a
+            ><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/08-07-2024/testimonial.html"
+              >Testimonial</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="q4" />
+        <label for="q4" class="plus"></label>
+        09-07-2024
+        <div class="answer">
+          <div>
+            <a
+              href="https://madhan5422i.github.io/Assignments/09-07-2024/calculator.html"
+              >Calculator</a><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/09-07-2024/mainpage.html"
+              >Main Page</a
+            ><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/09-07-2024/navbar.html"
+              >Menu Bar</a
+            ><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/09-07-2024/searchbar.html"
+              >Search Bar</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="q5" />
+        <label for="q5" class="plus"></label>
+        10-07-2024
+        <div class="answer">
+          <div>
+            <a
+              href="https://madhan5422i.github.io/Assignments/10-07-2024/queryselection.html"
+              >Query Selection</a><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/10-07-2024/subscription.html"
+              >subscription page</a
+            ><br>
+            <a
+              href="https://madhan5422i.github.io/Assignments/10-07-2024/todolist.html"
+              >To-Do List</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
