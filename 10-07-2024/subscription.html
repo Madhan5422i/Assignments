@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Newsletter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .newsletter-container {
+            width: 500px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .newsletter-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .newsletter-content {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .newsletter-content h2 {
+            margin-top: 0;
+        }
+        .newsletter-content p {
+            margin: 0 0 20px 0;
+        }
+        .newsletter-form input[type="text"],
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        .newsletter-form label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .newsletter-form label input {
+            margin-right: 10px;
+        }
+        .newsletter-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .newsletter-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="newsletter-container">
+        <div class="newsletter-header">CSS Newsletter</div>
+        <div class="newsletter-content">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
+        </div>
+        <form class="newsletter-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email address" required>
+            <label>
+                <input type="checkbox">
+                Daily Newsletter
+            </label>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</body>
+</html>
