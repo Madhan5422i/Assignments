@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Landing Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+      }
+      .header {
+        background: #333;
+        color: #fff;
+        padding: 1em 0;
+        text-align: center;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2em 0;
+      }
+      .hero {
+        background: #007bff;
+        color: #fff;
+        padding: 2em;
+        text-align: center;
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+      .hero p {
+        margin: 1em 0;
+        font-size: 1.2em;
+      }
+      .cta-button {
+        background: #28a745;
+        color: #fff;
+        padding: 0.75em 1.5em;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+      }
+      .features {
+        display: flex;
+        justify-content: space-around;
+        margin: 2em 0;
+      }
+      .feature {
+        background: #fff;
+        padding: 1em;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        margin: 0 1em;
+      }
+      .feature img {
+        width: 100px;
+        height: 100px;
+      }
+      .products {
+        margin: 2em 0;
+      }
+      .product {
+        background: #fff;
+        padding: 1em;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1em;
+      }
+      .product img {
+        width: 200px;
+        height: 200px;
+      }
+      .footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>My Pokemon Page</h1>
+    </div>
+
+    <div class="hero">
+      <h1>Welcome to My Page</h1>
+      <p>
+        Your success is our priority. Join us today and start experiencing the
+        difference.
+      </p>
+      <a href="#" class="cta-button">Get Started</a>
+    </div>
+
+    <div class="container">
+      <div class="features">
+        <div class="feature">
+          <img
+            src="https://th.bing.com/th/id/OIP.OJXjQZ-hft32b72WzaoWvAHaIN?rs=1&pid=ImgDetMain"
+            alt="Feature 1"
+          />
+          <h2>Charmander</h2>
+          <p>Detail about the first amazing feature.</p>
+        </div>
+        <div class="feature">
+          <img
+            src="https://th.bing.com/th/id/OIP.6CgxClKMTYEzFx4ge_n88gHaG2?rs=1&pid=ImgDetMain"
+            alt="Feature 2"
+          />
+          <h2>Bulbasaur</h2>
+          <p>Detail about the second amazing feature.</p>
+        </div>
+        <div class="feature">
+          <img
+            src="https://th.bing.com/th/id/R.f87ff0ddf2874b20d8c3c37b10681a35?rik=YMAAfnTp%2f5m2iA&riu=http%3a%2f%2fpurepng.com%2fpublic%2fuploads%2flarge%2fpurepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786718xxl59.png&ehk=DO5L3O%2bE%2bp2Vp0m%2fc%2fq8gjstNSjYwbT3v%2b7UudJqLto%3d&risl=&pid=ImgRaw&r=0"
+            alt="Feature 3"
+          />
+          <h2>Squirtle</h2>
+          <p>Detail about the third amazing feature.</p>
+        </div>
+      </div>
+
+      <div class="products">
+        <h2>Our Pokemons</h2>
+        <div class="product">
+          <img
+            src="https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/1200px-Mewtwo-RFVF.png"
+            alt="Product 1"
+          />
+          <h3>Mewtwo</h3>
+          <p>Description of the first product.</p>
+          <p><strong>$19.99</strong></p>
+          <a href="#" class="cta-button">Buy Now</a>
+        </div>
+        <div class="product">
+          <img
+            src="https://th.bing.com/th/id/R.f35246a53f4ec0a1375cd2720d05f126?rik=Y1IIAil1VolmOQ&riu=http%3a%2f%2forig10.deviantart.net%2f390b%2ff%2f2012%2f280%2f2%2f5%2fgengar_by_spotty_servine-d5h1urs.png&ehk=c%2fWgssjLOzSPNGLxF5dNOa%2bITA2bORSPF57GNQZIFww%3d&risl=&pid=ImgRaw&r=0"
+            alt="Product 2"
+          />
+          <h3>Gengar</h3>
+          <p>Description of the second product.</p>
+          <p><strong>$29.99</strong></p>
+          <a href="#" class="cta-button">Buy Now</a>
+        </div>
+        <div class="product">
+          <img
+            src="https://th.bing.com/th/id/R.b769a53779eb5454dc963c25439c0ea2?rik=M%2bzgjfmyZQP8ig&riu=http%3a%2f%2ffc03.deviantart.net%2ffs71%2fi%2f2013%2f292%2fd%2fd%2fmega_gyarados_by_theangryaron-d6r11fl.png&ehk=6atODxFkHxyK5bECD2QJ627jCPpcyjv%2barpRCH7V3Ek%3d&risl=&pid=ImgRaw&r=0"
+            alt="Product 3"
+          />
+          <h3>Gyaridos</h3>
+          <p>Description of the third product.</p>
+          <p><strong>$39.99</strong></p>
+          <a href="#" class="cta-button">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 My Landing Page. All rights reserved.</p>
+    </div>
+  </body>
+</html>
