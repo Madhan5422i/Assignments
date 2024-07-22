@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .quiz-container {
+            width: 50%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .correct {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">What is the capital of France?</div>
+        <div class="options">
+            <label><input type="radio" name="q1" value="A" class="option"> London</label>
+            <label><input type="radio" name="q1" value="B" class="option"> Berlin</label>
+            <label><input type="radio" name="q1" value="C" class="option"> Madrid</label>
+            <label><input type="radio" name="q1" value="D" class="option"> Paris</label>
+        </div>
+        <button id="submit">Submit</button>
+    </div>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function() {
+            const options = document.querySelectorAll(".option");
+            options.forEach((option) => {
+                const parentLabel = option.parentElement;
+                parentLabel.classList.remove("correct");
+                if (option.value === 'D' && option.checked) {
+                    parentLabel.classList.add("correct");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
