@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffd39b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 800px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        background-color: #4169e1;
+      }
+
+      h1 {
+        background-color: #4169e1;
+        color: #fff;
+        margin: 0 -20px 20px -20px;
+        padding: 20px;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      input,
+      select {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: calc(100% - 30px);
+      }
+
+      button {
+        background-color: #0000ff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #4169e1;
+      }
+
+      .table-container {
+        margin-top: 20px;
+        background-color: #add8e6;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th {
+        background-color: #0000ff;
+        color: #fff;
+      }
+
+      td button {
+        background-color: #ff4500;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      td button:hover {
+        background-color: #e03a00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add a new transaction:</h1>
+      <form id="transactionForm">
+        <div class="input-group">
+          <label for="type">Type:</label>
+          <select id="type" required>
+            <option value="">Choose one...</option>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="input-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" required />
+        </div>
+        <button type="submit">Add to transactions</button>
+      </form>
+      <div class="table-container">
+        <table id="transactionTable">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      const transactionForm = document.getElementById("transactionForm");
+      const transactionTable = document
+        .getElementById("transactionTable")
+        .getElementsByTagName("tbody")[0];
+
+      transactionForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const type = document.getElementById("type").value;
+        const name = document.getElementById("name").value;
+        const amount = document.getElementById("amount").value;
+
+        addTransaction(type, name, amount);
+        transactionForm.reset();
+      });
+
+      function addTransaction(type, name, amount) {
+        const row = transactionTable.insertRow();
+        const typeCell = row.insertCell(0);
+        const nameCell = row.insertCell(1);
+        const amountCell = row.insertCell(2);
+        const optionsCell = row.insertCell(3);
+
+        typeCell.textContent = type;
+        nameCell.textContent = name;
+        amountCell.textContent = `$${amount}`;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function () {
+          transactionTable.deleteRow(row.rowIndex - 1);
+        };
+        optionsCell.appendChild(deleteButton);
+      }
+    </script>
+  </body>
+</html>
